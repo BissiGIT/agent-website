@@ -1,4 +1,5 @@
 body {
+    display: flex;
     min-height: 97vh;
     margin: 0px;
     background-color: $Background_Color;
@@ -7,20 +8,21 @@ body {
     font-size: 18px;
     // HEADER
     header {
-        width: 100%;
-        height: 7%;
-        background-color: $Header;
-    }
-    main {
-        width: 100%;
-        height: 100%;
         display: flex;
+        width: 200px;
+        height: 100vh;
         flex-direction: column;
-        // BARRE DE NAVIGATION
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $Header;
+        img {
+            width: 60px;
+            padding: 20px 0px;
+        }
         nav {
             width: 100%;
             height: 45px;
-            margin-bottom: 10px;
+            margin: 50px 0px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -30,100 +32,69 @@ body {
                 width: 100%;
                 display: flex;
                 justify-content: space-evenly;
-                padding: 0px;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                padding: 10px 0px;
                 margin: 0px;
                 li {
-                    width: 130px;
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     cursor: pointer;
+                    a {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        text-decoration: none;
+                        color: $Background_Color;
+                        background-color: $color_four;
+                        padding: 10px 0px;
+                        margin: 10px 0px;
+                        i {
+                            margin: 0px 10px;
+                            font-size: 20px;
+                        }
+                        span {
+                            margin: 0px 10px;
+                            font-weight: bold;
+                        }
+                    }
                 }
                 .select {
                     color: $color_add_five;
                 }
             }
         }
-        // CPU BLOCK
-        .system_block {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 80px;
-            .system_block_generique {
-                width: 280px;
-                height: 230px;
-                padding: 1px;
-                border-radius: 5px;
-                background-color: $color_one;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-                h5 {
-                    text-align: left;
-                    width: 80%;
-                }
-            }
-            .system_network {
-                width: 350px;
-                height: 150px;
-            }
+        p {
+            width: 100%;
+            margin: 0px;
+            padding: 10px 0px 10px 0px;
+            background-color: #af0000;
+            text-align: center;
         }
-        .system_block_bottom {
+    }
+    main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .block-generique {
             display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            .system_block_bottom_generique {
-                width: 40%;
-                margin: 0px 80px;
-                display: flex;
-                flex-direction: column;
-                p {
-                    color: $color_seven;
-                    margin: 7px 0px;
-                    font-size: 16px;
-                }
-                .system_block_generique {
-                    width: 420px;
-                    height: 130px;
-                    padding: 1px;
-                    margin: 15px 0px;
-                    border-radius: 5px;
-                    background-color: $color_one;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    align-content: center;
-                    h5 {
-                        width: 90%;
-                        margin: 0;
-                    }
-                    span {
-                        display: flex;
-                        justify-content: flex-end;
-                        width: 380px;
-                        background-color: $Background_Color;
-                        p {
-                            position: relative;
-                            top: 20px;
-                            margin: 0px;
-                            color: $color_seven;
-                        }
-                    }
-                    #span-download {
-                        box-shadow: inset 0px 0px 0px 0px rgba(140, 15, 241, 0.5)
-                    }
-                    #span-upload {
-                        box-shadow: inset 0px 0px 0px 0px rgba(2, 149, 160, 0.5)
-                    }
-                }
-            }
-            .system_info {
-                height: 90%;
-            }
-            .system_network {
-                align-items: end;
+            flex-direction: column;
+            width: 500px;
+            height: 300px;
+            margin: 50px;
+            background-color: $color_one;
+            border-radius: 10px;
+            h3 {
+                width: 100%;
+                height: 30px;
+                margin: 0px;
+                padding: 10px 0px;
+                text-align: center;
+                border-radius: 10px 10px 0px 0px;
+                background-color: $color_add_one;
             }
         }
     }

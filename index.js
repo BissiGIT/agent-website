@@ -1,63 +1,28 @@
-// CONST
 const express = require('express');
 const app = express();
 const http = require('http');
-// const path = require('path');
+const path = require('path');
 const server = http.createServer(app);
-// const si = require('systeminformation');
-// Recupe config Agent
-const AgentConfig = require('../../functions/config/index');
-AgentConfig();
-AgentPort = dataConf.port.http;
+const WebsiteConfig = require('./config.json');
 
-// set the view engine to ejs
+var public = path.join(__dirname, 'public');
+
+app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
-
-// SOCKET IO
-const { Server } = require("socket.io");
-const io = new Server(server);
-
+app.engine('html', require('ejs').renderFile);
 // AXIOS
 const axios = require("axios");
+// Variables
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 // ROUTE
+app.use('/', express.static(public));
 app.get('/', function(req, res) {
-    let cpuinfo = require('../../data/system_cpu.json')
-    let systeminfo = require('../../data/system_materiel.json')
-    let osinfo = require('../../data/system_os.json')
-    var options = {
-        title: "Dashboard",
-        cpuSpeedMax: cpuinfo.cpuSpeedMax,
-        cpuCores: cpuinfo.cpuCores,
-        cpuModele: cpuinfo.cpuModel,
-        manufacturer: systeminfo.manufacturer,
-        model: systeminfo.model,
-        platform: osinfo.platform,
-        distro: osinfo.distro
-    }
-    res.render('pages/index', options);
-});
-
-// CONFIG
-app.get('/configuration', function(req, res) {
-    res.render('pages/index', { title: "title" });
+    res.render('main', { title: "dashboard" });
 });
 
 // Start server WEB
-server.listen(AgentPort, () => {
-    console.log('HTTP:' + AgentPort);
-});
-
-// PING Website
-app.get("/promise", (req, res) => {
-    axios({
-            url: "https://cr.mhemery.com/teszt",
-            method: "HEAD",
-        })
-        .then(response => {
-            res.status(200).json("200");
-        })
-        .catch((err) => {
-            res.status(500).json({ message: err });
-        });
+server.listen(WebsiteConfig.port, () => {
+    console.log('HTTP:' + WebsiteConfig.port);
 });
