@@ -2,10 +2,13 @@ body {
   display: flex;
   min-height: 97vh;
   margin: 0px;
-  background-color: #212b34;
+  background-color: #ebebeb;
   font-family: "Open Sans", sans-serif;
   color: #F5F5F5;
   font-size: 18px;
+}
+body a {
+  text-decoration: none;
 }
 body header {
   display: flex;
@@ -14,7 +17,7 @@ body header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #f05454;
+  background-color: #095b8b;
 }
 body header img {
   width: 60px;
@@ -28,7 +31,6 @@ body header nav {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background-color: rgba(240, 84, 84, 0.5);
 }
 body header nav ul {
   width: 100%;
@@ -47,56 +49,256 @@ body header nav ul li {
   cursor: pointer;
 }
 body header nav ul li a {
-  width: 100%;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  color: #212b34;
-  background-color: #F5F5F5;
-  padding: 10px 0px;
+  color: #ebebeb;
+  padding: 20px 0px;
   margin: 10px 0px;
 }
 body header nav ul li a i {
+  width: 30px;
   margin: 0px 10px;
   font-size: 20px;
 }
 body header nav ul li a span {
+  width: 170px;
   margin: 0px 10px;
   font-weight: bold;
 }
-body header nav ul .select {
-  color: rgba(235, 187, 30, 0.877);
+body header nav ul li .select {
+  background-color: #094166;
 }
-body header p {
+body header .login {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
+  height: 50px;
   margin: 0px;
   padding: 10px 0px 10px 0px;
-  background-color: #af0000;
+  background-color: #04273d;
   text-align: center;
+  align-items: center;
+}
+body header .login img {
+  width: 40px;
+  height: 40px;
+}
+body header .login p {
+  display: flex;
+  flex-direction: column;
+}
+body header .login p span {
+  font-size: 14px;
+}
+body header .login p .name {
+  font-weight: bold;
 }
 body main {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body main .block-generique {
+body main .top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0px 10px 0px;
+  color: #000000;
+  background-color: #F5F5F5;
+}
+body main .top-bar h4 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px 15px;
+}
+body main .top-bar .notif-btn-add {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 30px;
+}
+body main .top-bar .notif-btn-add p {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  height: 50px;
+  margin: 0px;
+  text-align: center;
+  align-items: center;
+}
+body main .top-bar .notif-btn-add p i {
+  font-size: 30px;
+  width: 25px;
+  height: 25px;
+}
+body main .top-bar .notif-btn-add p span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 25px;
+  height: 25px;
+  font-size: 15px;
+  background-color: #a02222;
+  color: #F5F5F5;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 0px 15px;
+  padding: 3px;
+  position: relative;
+  top: -15px;
+  right: 20px;
+}
+body main .top-bar .notif-btn-add a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+  padding: 5px 10px;
+  color: #000000;
+  background-color: rgba(235, 187, 30, 0.6);
+  border-radius: 5px;
+  border-bottom: solid 5px #ebbb1e;
+  transition: 0.3s;
+}
+body main .top-bar .notif-btn-add a:hover {
+  background-color: #ebbb1e;
+  transition: 0.3s;
+}
+body main .list-modules {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: #333333;
+}
+body main .list-modules h2 {
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: #094166;
+}
+body main .list-modules .block-module {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  background-color: #333333;
+}
+body main .list-modules .block-module .block-generique {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 300px;
-  margin: 50px;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  color: #F5F5F5;
   background-color: #283a48;
   border-radius: 10px;
+  border: solid 1px #3f3f3f;
 }
-body main .block-generique h3 {
+body main .list-modules .block-module .block-generique h3 {
   width: 100%;
   height: 30px;
   margin: 0px;
   padding: 10px 0px;
   text-align: center;
   border-radius: 10px 10px 0px 0px;
-  background-color: #289bfa;
+  background-color: #094166;
+}
+body main .list-modules .block-module .block-generique .block-col-gen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+body main .list-modules .block-module .block-generique .block-col-gen p {
+  text-align: center;
+}
+body main .list-modules .block-module .block-generique .block-col-gen .block-description {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: start;
+}
+body main .list-modules .block-module .block-generique .block-col-gen .block-description span {
+  margin: 5px 0px;
+}
+body main .list-modules .block-module .block-generique .block-col-gen img {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+body main .list-modules-installed {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 96%;
+  margin: 20px 0px;
+  border-radius: 5px;
+  color: #F5F5F5;
+  background-color: #283a48;
+}
+body main .list-modules-installed .bar-module {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+body main .list-modules-installed .bar-module i {
+  margin: 0px 15px;
+  font-size: 20px;
+}
+body main .list-modules-installed .top-bar-module {
+  border-radius: 5px 5px 0px 0px;
+  background-color: #04273d;
+}
+body main .list-modules-installed .middle-bar-module {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen .statut {
+  width: 10%;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen .name {
+  width: 15%;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen .description {
+  width: 40%;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen .version {
+  width: 15%;
+}
+body main .list-modules-installed .middle-bar-module .tbl-gen .action {
+  width: 15%;
+}
+body main .list-modules-installed .bottom-bar-module {
+  background-color: #094166;
+  border-radius: 0px 0px 5px 5px;
+}
+body main .list-modules-installed .bottom-bar-module p {
+  margin: 0px 20px;
+  padding: 5px 0px;
+  height: 20px;
 }
 
 /* @KeyFrame */

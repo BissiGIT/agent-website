@@ -19,7 +19,15 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 // ROUTE
 app.use('/', express.static(public));
 app.get('/', function(req, res) {
-    res.render('main', { title: "dashboard" });
+    const configWebsite = require('./config.json');
+    let options = {
+        title: "dashboard",
+        websiteName: configWebsite.name,
+        websiteDescription: configWebsite.description,
+        websiteVersion: configWebsite.version,
+        websiteBuild: configWebsite.build
+    }
+    res.render('main', options);
 });
 
 // Start server WEB
