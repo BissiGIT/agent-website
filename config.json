@@ -1,7 +1,7 @@
 {
     "port": "80",
     "version": "1.0.0",
-    "build": "A100",
+    "build": "B100",
     "description": "Interface web dédié à la configuration de l'agent",
     "name": "Website"
 }
