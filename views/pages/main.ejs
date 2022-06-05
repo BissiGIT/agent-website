@@ -1,0 +1,65 @@
+<%- include('../partials/head'); %>
+    <main id="dashboard" class="main-block">
+        <div class="top-bar">
+            <h4>Dashboard</h4>
+            <div class="notif-btn-add">
+                <p><i class="fa-solid fa-bell"></i><span>0</span></p>
+                <a href="#"><i class="fa-solid fa-plus"></i> Ajouter un module</a>
+            </div>
+        </div>
+        <!-- Bandeau des modules -->
+        <div class="list-modules">
+            <h2>Liste des modules disponible</h2>
+            <div class="block-module">
+                <a href="#" class="block-generique block-module-ping">
+                    <h3>Website</h3>
+                    <div class="block-col-gen">
+                        <img src="images/www.png">
+                        <p class="block-description">Description: <span class="description">Ici, une petite description du module</span></p>
+                        <p>Version du module: <span class="version">0.0.0</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Liste des modules -->
+        <div class="list-modules-installed">
+            <div class="bar-module top-bar-module">
+                <i class="fa-solid fa-plug"></i>
+                <h3>Modules</h3>
+            </div>
+            <div class="bar-module middle-bar-module">
+                <div class="tbl-gen tbl-option">
+                    <p class="statut">Statut</p>
+                    <p class="name">Nom du module</p>
+                    <p class="description">Description</p>
+                    <p class="version">Version</p>
+                    <p class="action">Actions</p>
+                </div>
+                <div class="tbl-gen tbl-option">
+                    <p class="data-statut statut"><i class="fa-solid fa-circle"></i></p>
+                    <p class="data-name name">Fork</p>
+                    <p class="data-description description">Gestion du lancement des différents module disponible</p>
+                    <p class="data-version version">0.0.1</p>
+                    <p class="data-action action"></p>
+                </div>
+                <div class="tbl-gen tbl-option">
+                    <p class="data-statut statut"><i class="fa-solid fa-circle"></i></p>
+                    <p class="data-name name">
+                        <%= websiteName %>
+                    </p>
+                    <p class="data-description description">
+                        <%= websiteDescription %>
+                    </p>
+                    <p class="data-version version">
+                        <%= websiteVersion %> -
+                            <%= websiteBuild %>
+                    </p>
+                    <p class="data-action action"></p>
+                </div>
+            </div>
+            <div class="bottom-bar-module">
+                <p>Nombre de module allumé: [0]</p>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/foot'); %>
