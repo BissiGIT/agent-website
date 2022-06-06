@@ -30,6 +30,12 @@ app.get('/', function(req, res) {
     res.render('main', options);
 });
 
+app.get('/update', function(req, res) {
+    const { UpdateWebsite } = require('./update');
+    UpdateWebsite();
+    res.send('update');
+});
+
 // Start server WEB
 server.listen(WebsiteConfig.port, () => {
     console.log('HTTP:' + WebsiteConfig.port);
