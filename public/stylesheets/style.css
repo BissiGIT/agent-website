@@ -109,8 +109,8 @@ body main .top-bar {
   width: 100%;
   height: 50px;
   padding: 10px 0px 10px 0px;
-  color: #000000;
-  background-color: #F5F5F5;
+  color: #F5F5F5;
+  background-color: #04273d;
 }
 body main .top-bar h4 {
   display: flex;
@@ -146,7 +146,7 @@ body main .top-bar .notif-btn-add p span {
   width: 25px;
   height: 25px;
   font-size: 15px;
-  background-color: #a02222;
+  background-color: rgb(160, 34, 34);
   color: #F5F5F5;
   font-weight: bold;
   border-radius: 50%;
@@ -155,6 +155,81 @@ body main .top-bar .notif-btn-add p span {
   position: relative;
   top: -15px;
   right: 20px;
+}
+body main .top-bar .notif-btn-add .block-notif-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  width: 340px;
+  height: 400px;
+  top: 60px;
+  right: 275px;
+  z-index: 1;
+  align-items: end;
+}
+body main .top-bar .notif-btn-add .block-notif-all .triangle-code {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  z-index: 2;
+  margin-right: 20px;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #094166;
+  border-left: 15px solid transparent;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif {
+  width: 340px;
+  height: 95%;
+  background-color: #283a48;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 10px #F5F5F5;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif h3 {
+  margin: 0px;
+  padding: 10px 0px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  background-color: #094166;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif .bar-notif-bottom {
+  font-size: 14px;
+  border-radius: 0px 0px 10px 10px;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif .box-notif-all {
+  width: 100%;
+  height: 80%;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif .box-notif-all .notif-box {
+  width: 95%;
+  margin: 5px 0px;
+  border-radius: 5px;
+  background-color: rgba(235, 187, 30, 0.6);
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif .box-notif-all .notif-box h4 {
+  font-size: 16px;
+  padding: 5px 0px;
+}
+body main .top-bar .notif-btn-add .block-notif-all .box-notif .box-notif-all .notif-box p {
+  width: 94%;
+  text-align: start;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12px;
+  padding: 8px 10px;
+  height: auto;
+}
+body main .top-bar .notif-btn-add .hidden {
+  display: none;
 }
 body main .top-bar .notif-btn-add a {
   display: flex;
@@ -166,11 +241,11 @@ body main .top-bar .notif-btn-add a {
   color: #000000;
   background-color: rgba(235, 187, 30, 0.6);
   border-radius: 5px;
-  border-bottom: solid 5px #ebbb1e;
+  border-bottom: solid 5px rgb(235, 187, 30);
   transition: 0.3s;
 }
 body main .top-bar .notif-btn-add a:hover {
-  background-color: #ebbb1e;
+  background-color: rgb(235, 187, 30);
   transition: 0.3s;
 }
 body main .list-modules {
@@ -327,13 +402,13 @@ body main .list-modules-installed .bottom-bar-module p {
 }
 @keyframes AnimLogo {
   0% {
-    box-shadow: 0 0 20px 10px #a02222;
+    box-shadow: 0 0 20px 10px rgb(160, 34, 34);
   }
   50% {
-    box-shadow: 0 0 20px 110px #a02222;
+    box-shadow: 0 0 20px 110px rgb(160, 34, 34);
   }
   100% {
-    box-shadow: 0 0 20px 10px #a02222;
+    box-shadow: 0 0 20px 10px rgb(160, 34, 34);
   }
 }
 

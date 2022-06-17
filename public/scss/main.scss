@@ -108,8 +108,8 @@ body {
             width: 100%;
             height: 50px;
             padding: 10px 0px 10px 0px;
-            color: $texte_black;
-            background-color: $color_four;
+            color: $texte;
+            background-color: $color_six;
             h4 {
                 display: flex;
                 align-items: center;
@@ -152,6 +152,81 @@ body {
                         top: -15px;
                         right: 20px;
                     }
+                }
+                .block-notif-all {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    position: absolute;
+                    width: 340px;
+                    height: 400px;
+                    top: 60px;
+                    right: 275px;
+                    z-index: 1;
+                    align-items: end;
+                    .triangle-code {
+                        display: inline-block;
+                        height: 0;
+                        width: 0;
+                        z-index: 2;
+                        margin-right: 20px;
+                        border-right: 15px solid transparent;
+                        border-bottom: 20px solid $color_add_one;
+                        border-left: 15px solid transparent;
+                    }
+                    .box-notif {
+                        width: 340px;
+                        height: 95%;
+                        background-color: $color_one;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 20px 10px $color_four;
+                        h3 {
+                            margin: 0px;
+                            padding: 10px 0px;
+                            border-radius: 10px 10px 0px 0px;
+                            text-align: center;
+                            background-color: $color_add_one;
+                        }
+                        .bar-notif-bottom {
+                            font-size: 14px;
+                            border-radius: 0px 0px 10px 10px;
+                        }
+                        .box-notif-all {
+                            width: 100%;
+                            height: 80%;
+                            padding: 5px 0px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            align-content: center;
+                            flex-direction: column;
+                            overflow-y: scroll;
+                            scrollbar-color: rebeccapurple green;
+                            scrollbar-width: thin;
+                            .notif-box {
+                                width: 95%;
+                                margin: 5px 0px;
+                                border-radius: 5px;
+                                background-color: $color_add_five;
+                                h4 {
+                                    font-size: 16px;
+                                    padding: 5px 0px;
+                                }
+                                p {
+                                    width: 94%;
+                                    text-align: start;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    font-size: 12px;
+                                    padding: 8px 10px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hidden {
+                    display: none;
                 }
                 a {
                     display: flex;

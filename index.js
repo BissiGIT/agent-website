@@ -6,6 +6,7 @@ const server = http.createServer(app);
 const WebsiteConfig = require('./config.json');
 
 var public = path.join(__dirname, 'public');
+var update = path.join(__dirname, 'update');
 
 app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
@@ -18,10 +19,11 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 // ROUTE
 app.use('/', express.static(public));
+app.use('/update', express.static(update));
 app.get('/', function(req, res) {
     const configWebsite = require('./config.json');
     let options = {
-        title: "dashboard",
+        title: "Dashboard",
         websiteName: configWebsite.name,
         websiteDescription: configWebsite.description,
         websiteVersion: configWebsite.version,
@@ -30,10 +32,12 @@ app.get('/', function(req, res) {
     res.render('main', options);
 });
 
-app.get('/update', function(req, res) {
-    const { UpdateWebsite } = require('./update');
-    UpdateWebsite();
-    res.send('update');
+app.post('/api-clone', function(req, res) {
+    const { CloneAPI } = require('./update');
+    CloneAPI();
+    setTimeout(function() {
+        res.send('installed');
+    })
 });
 
 // Start server WEB
